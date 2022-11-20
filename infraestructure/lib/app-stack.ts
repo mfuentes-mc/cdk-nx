@@ -20,7 +20,7 @@ export class AppStack extends cdk.Stack {
       synth: new ShellStep('Synth',{
         input: CodePipelineSource.gitHub(`${props?.options.rootAccount}/${props?.options.reposName}`,'main'),
         commands: [
-          'npm',
+          'npm i',
           'npm run build',
           'ls',
           'cd infraestructure',
