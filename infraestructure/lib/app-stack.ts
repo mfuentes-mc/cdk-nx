@@ -20,8 +20,8 @@ export class AppStack extends cdk.Stack {
       synth: new ShellStep('Synth',{
         input: CodePipelineSource.gitHub(`${props?.options.rootAccount}/${props?.options.reposName}`,'main'),
         commands: [
-          'yarn',
-          'yarn build',
+          'npm',
+          'npm run build',
           'ls',
           'cd infraestructure',
           'npm ci',
