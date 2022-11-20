@@ -21,6 +21,7 @@ export class AppStack extends cdk.Stack {
         input: CodePipelineSource.gitHub(`${props?.options.rootAccount}/${props?.options.reposName}`,'main'),
         commands: [
           'npm i',
+          "npm i nx",
           'npm run build',
           'ls',
           'cd infraestructure',
